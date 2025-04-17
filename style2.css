@@ -1,0 +1,153 @@
+/* The styling for this page will be different from the rest of the site.
+Here Im practicing styling the mobile first. that means using media queries for the desktop size not the mobile. */
+
+/* === Base layout === */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    font-family: 'Syne', sans-serif;
+    line-height: 1.5;
+    background-color: var(--background-color-medium);
+    height: 100%;
+    width: 100%;
+}
+
+/* ===============================
+   2. Variables (optional if using root variables)
+================================*/
+:root {
+    --primary-color: orange;
+    --text-color-light: #fff;
+    --background-color-medium-dark: #333;
+    --background-color-medium: #444;
+    --color-dark: #000;
+    --font-heading: 'Syne', sans-serif;
+    --spacing-unit: 1rem;
+  }
+  
+/* ===============================
+   3. Layout / Structure
+================================*/
+/* handles containers, grid, flex wrappers, main page structure */
+
+.centered-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: purple solid 3px;
+    
+}
+
+.content {
+    flex: 1;
+    border: green 2px solid;
+}
+
+.full-size {
+    width: 100%;
+    height: 100%;
+}
+
+.section-divider {
+    background-color: var(--text-color-light);
+    height: 2px;
+    width: 90%;
+  }
+
+/* =========================
+   4. Coloring
+========================= */
+
+.light-text {
+    color: var(--text-color-light);
+}
+
+/* =========================
+   5. Components
+========================= */
+
+.footer {
+  min-height: 15em;
+  padding: 1em;
+  width: 100%;
+  background: #000;
+  border: blue solid 2px;
+}
+
+.container {
+    height: 100%;
+    border: red solid 1px;
+}
+
+.footer-content {
+    /* justify-content: center; */
+    gap: 2em;
+    border: yellow solid 1px;
+  }
+
+  /* Specific styling for image container */
+  .image-container {
+    width: auto;
+    height: 7em;
+  }
+
+  .image-container img{
+    width: auto;
+    height: 100%;
+    object-fit: cover;
+    overflow: hidden;
+  }
+
+  .email-form {
+    gap: 1em;
+    width:100%;
+    justify-content: center;
+  }
+
+  .form-head {
+    text-align: center;
+  }
+
+  .input-button {
+    display: flex;
+    align-items: center;
+    border: 1px solid greenyellow;
+    border: orange solid 2px;
+    border-radius: 50px;
+    max-width: 100%;
+    flex-wrap: wrap; /* fallback for small screens */
+  }
+
+
+
+
+
+
+.social-icons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    padding: 1rem 0;
+  }
+  
+  .social-icons a {
+    color: var(--text-color-light); /* or whatever your footer color scheme is */
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+  }
+  
+  .social-icons a:hover {
+    color: var(--text-color-medium); /* add a cool hover color */
+  }
+
+
+  /* MEDIA STYLING */
+

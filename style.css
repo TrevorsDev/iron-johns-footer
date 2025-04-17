@@ -1,0 +1,195 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body { 
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  background: gray;
+  border: greenyellow solid 2px;
+}
+
+/* Section to push footer to bottom */
+.content {
+  flex: 1;
+  border: green solid 3px;
+}
+
+/*////////////////////////////////////////*/
+/* FOOTER CONTENT */
+
+/* Menu and Desktop styling */
+.footer {
+  min-height: 15em;
+  width: 100%;
+  padding: 1em;
+  background: #000;
+  bottom: 0;
+  border: blue solid 2px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  /* border: red dotted 1px; */
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2em;
+  width: 100%;
+  /* border: yellow solid 1px; */
+}
+
+.email-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+  width:100%;
+}
+
+.email-form fieldset {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5em;
+  border: none;
+}
+
+label {
+  /* Keeps the label in the DOM for screen readers but removes it from visual layout */
+  position: absolute;
+  left: -9999px;
+  background: orangered
+}
+
+.image-container img{
+  width: auto;
+  height: 100%;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+.image-container {
+  width: auto;
+  height: 4.5em;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.email-form fieldset {
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.form-head {
+  display:flex;
+  flex-direction: column;
+  align-content: center;
+  text-align: center;
+  gap: 1em;
+  width: 100%;
+  color: #fff;
+}
+
+.form-container {
+  margin: 2em 0 0 0;
+}
+
+.input-button {
+  display: flex;
+  align-items: center;
+  border: 1px solid greenyellow;
+  border: orange solid 2px;
+  border-radius: 50px;
+  max-width: 100%;
+  flex-wrap: wrap; /* fallback for small screens */
+}
+
+.input-box {
+  flex: 1;
+  min-width: 200px;
+  padding: .8em;
+  background: transparent;
+  font-size: 1rem;
+  border: none;
+  color: orange;
+}
+
+input::placeholder {
+  color: orange;
+  font-size: 1rem;
+  opacity: 1; /* Optional: some browsers make it semi-transparent by default */
+}
+
+input:focus {
+  outline: 1px solid transparent;
+  background: #222;
+  border-radius: 50px 0 0 50px;
+}
+
+.button {
+  padding: .8em 2em;
+  background: orange;
+  font-size: 1rem;
+  border: none;
+  border-radius: 0 50px 50px 0;
+  cursor: pointer;
+}
+
+.button:active,
+.button:hover,
+.button:focus {
+  background: rgb(255, 188, 64);
+  color: #fff;
+}
+
+.section-divider {
+  background-color: white;
+  height: 2px;
+  width: 90%;
+}
+
+
+/* Optional: Hide labels for visual users but keep for screen readers */
+.visually-hidden {
+  position: absolute;
+  left: -9999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+/* Desktop View */
+@media (width >= 425px) {
+  .image-container {
+    width: auto;
+    height: 6em;
+  }
+  
+}
+
+/* Mobile View */
+@media (width < 600px) {
+  
+
+}
