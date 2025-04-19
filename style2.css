@@ -13,7 +13,7 @@ Here Im practicing styling the mobile first. that means using media queries for 
 
 html,
 body {
-    font-family: 'Syne', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     line-height: 1.5;
     background-color: var(--background-color-medium);
     height: 100%;
@@ -42,56 +42,80 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: purple solid 3px;
+    /* border: purple solid 3px; */
     
 }
 
 .content {
     flex: 1;
-    border: green 2px solid;
+    /* border: green 2px solid; */
 }
 
 .full-size {
     width: 100%;
-    height: 100%;
+    /* height: 100%; */
+}
+
+.element-margin {
+  margin: .8em 0;
 }
 
 .section-divider {
-    background-color: var(--text-color-light);
+    border: none;
+    background: orange;
     height: 2px;
     width: 90%;
+    max-width: 375px;
   }
 
+  label {
+    /* Keeps the label in the DOM for screen readers but removes it from visual layout */
+    position: absolute;
+    left: -9999px;
+    background: orangered
+  }
+
+.company-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* border: orange 1px solid; */
+}
+
 /* =========================
-   4. Coloring
+   4. Coloring/Visual/Presentation
 ========================= */
 
 .light-text {
     color: var(--text-color-light);
 }
 
+/* Belongs to the container for email input */
+.input-box,
+  .button {
+    font-weight: 700;
+  }
+
+  .company-links ul li {
+    list-style-type: none;
+  }
 /* =========================
    5. Components
 ========================= */
 
 .footer {
-  min-height: 15em;
-  padding: 1em;
+  padding: 1em;/* Adds initial  padding around parent element */
   width: 100%;
   background: #000;
-  border: blue solid 2px;
-}
-
-.container {
-    height: 100%;
-    border: red solid 1px;
 }
 
 .footer-content {
-    /* justify-content: center; */
-    gap: 2em;
-    border: yellow solid 1px;
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  gap: 4em;
+}
 
   /* Specific styling for image container */
   .image-container {
@@ -118,15 +142,56 @@ body {
 
   .input-button {
     display: flex;
-    align-items: center;
-    border: 1px solid greenyellow;
-    border: orange solid 2px;
+    /* align-items: center; */
     border-radius: 50px;
-    max-width: 100%;
-    flex-wrap: wrap; /* fallback for small screens */
+    min-width: 200px;
+     /* fallback for small screens */
   }
 
+  .input-box {
+    flex: 1;
+    width: 100%;
+    padding: .5em 1em;
+    color: orange;
+    background: transparent;
+    border: orange solid 2px;
+    border-right: none;
+    border-radius: 50px 0 0 50px;
+    transition: all .3s
+  }
 
+  .input-box:focus,
+  .input-box:focus-visible {
+    outline:none;
+    box-shadow:none;
+    color: #fff;
+    border: #fff 2px solid;
+    border-right: none;
+  }
+
+  .input-box::placeholder {
+    color: orange;
+    transition: all .3s;
+  }
+
+  .input-box:focus::placeholder {
+    color: #fff;
+  }
+
+  .button {
+    padding: .8em .8em;
+    background: orange;
+    border: none;
+    border-radius: 0 50px 50px 0;
+    cursor: pointer;
+    transition: all .3s;
+  }
+
+  .button:hover,
+  .button:focus,
+  .buttonLfocus-visible {
+    background: #fff;
+  }
 
 
 
@@ -136,6 +201,7 @@ body {
     gap: 1rem;
     justify-content: center;
     padding: 1rem 0;
+    /* border: red solid 1px; */
   }
   
   .social-icons a {
@@ -144,8 +210,9 @@ body {
     transition: color 0.3s ease;
   }
   
-  .social-icons a:hover {
-    color: var(--text-color-medium); /* add a cool hover color */
+  .social-icons a:hover,
+  .social-icons a:focus {
+    color: orange; 
   }
 
 
