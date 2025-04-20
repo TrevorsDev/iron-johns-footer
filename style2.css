@@ -43,11 +43,15 @@ body {
     flex-direction: column;
     align-items: center;
     /* border: purple solid 3px; */
-    
+}
+
+.row {
+  display:flex;
 }
 
 .content {
     flex: 1;
+    height: 100vh;
     /* border: green 2px solid; */
 }
 
@@ -61,19 +65,19 @@ body {
 }
 
 .section-divider {
-    border: none;
-    background: orange;
-    height: 1.5px;
-    width: 90%;
-    max-width: 375px;
-  }
+  border: none;
+  background: orange;
+  height: 1.5px;
+  width: 90%;
+  max-width: 375px;
+}
 
-  label {
-    /* Keeps the label in the DOM for screen readers but removes it from visual layout */
-    position: absolute;
-    left: -9999px;
-    background: orangered
-  }
+label {
+  /* Keeps the label in the DOM for screen readers but removes it from visual layout */
+  position: absolute;    
+  left: -9999px;
+  background: orangered
+}
 
 .company-links {
   display: flex;
@@ -82,12 +86,18 @@ body {
   /* border: orange 1px solid; */
 }
 
+.gap-1em { 
+  gap: .8em; 
+  /* border: red solid 1px; */
+}
+
 /* =========================
    4. Coloring/Visual/Presentation
 ========================= */
 
 .light-text {
     color: var(--text-color-light);
+    text-decoration: none;
 }
 
 /* Belongs to the container for email input */
@@ -99,17 +109,33 @@ body {
   .company-links ul li {
     list-style-type: none;
   }
+
+  .small-text {
+    font-size: .8rem;
+  }
+
+  /* Hover effects over links */
+  .hover-orange:hover,
+  .hover-orange:focus {
+    color: var(--primary-color);
+    transition: color 0.3s ease;
+    cursor: pointer;
+  }
+
 /* =========================
    5. Components
 ========================= */
 
 .footer {
-  padding: 1em;/* Adds initial  padding around parent element */
   width: 100%;
   background: #000;
 }
 
-.footer-content {
+.container-padding-1em {
+  padding: 1em;
+}
+
+.content {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -154,7 +180,7 @@ body {
     padding: .5em 1em;
     color: orange;
     background: transparent;
-    border: orange solid 2px;
+    border: orange solid 1.5px;
     border-right: none;
     border-radius: 50px 0 0 50px;
     transition: all .3s
@@ -193,13 +219,6 @@ body {
     background: var(--text-color-light);
   }
 
-.company-links ul li:hover,
-.company-links ul li:focus {
-  transition: color .3s;
-  color: var(--primary-color);
-  cursor: pointer;
-}
-
 
 .social-icons {
     display: flex;
@@ -210,16 +229,35 @@ body {
   }
   
   .social-icons a {
-    color: var(--text-color-light); /* or whatever your footer color scheme is */
+    color: var(--primary-color); /* or whatever your footer color scheme is */
     font-size: 1.5rem;
     transition: color 0.3s ease;
   }
   
   .social-icons a:hover,
   .social-icons a:focus {
-    color: orange; 
+    color: var(--text-color-light); 
   }
 
+.copyright {
+  text-align: center;
+}
+
+.legal {
+  background: #111;
+  padding: 1em;
+  gap: 1em;
+}
+
+.legal p {
+  text-align: center;
+}
+
+.divider {
+  color: var(--text-color-light); /* or any appropriate color */
+  padding: 0 0.5em;
+}
 
   /* MEDIA STYLING */
 
+/* Create a separate landiung page with locations that combines all locations together when "Locatinos" is clicked on */
